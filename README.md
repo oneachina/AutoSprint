@@ -7,14 +7,14 @@
     <img src="images/logo.png" alt="Logo" width="100" height="100">
   </a>
 
-<h3 align="center">Ghost-Downloader 3</h3>
+<h3 align="center">AutoSprint</h3>
 
   <p align="center">
     AutoSprint for Minecraft Java/BE
     <br />
-    <a href="https://github.com/XiaoYouChR/Ghost-Downloader-3/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/oneachina/AutoSprint/issues">Report Bug</a>
     ·
-    <a href="https://github.com/XiaoYouChR/Ghost-Downloader-3/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/oneachina/AutoSprint/issues">Request Feature</a>
   </p>
 </div>
 
@@ -39,13 +39,13 @@
 <!-- ABOUT THE PROJECT -->
 ## 关于本项目
 
-[![Product Name Screen Shot][product-screenshot]](https://space.bilibili.com/437313511)
+[![Product Name Screen Shot][product-screenshot]](https://space.bilibili.com/1582724340)
 
-在兴趣驱动下完成的一个下载器，是本人的第一个Python项目😫，本来的目的是帮B站上一位UP主做资源整合的😵。支持多线程下载、断点续传、下载记录、校验文件等功能。特点是能像IDM一样智能分块但又不需要合并文件。但是Python和Qt💩一样的内存占用成为项目很大的槽点😭
+
 
 ## 须知
 * 在开发环境中运行本项目请加上 `--debug` 实参！
-* `PySide6-Fluent-Widgets` 与 `PySide6` `v6.4.2` 以上版本兼容不佳
+* `PyQt5-Fluent-Widgets` 与 `PyQt5` `v6.4.2` 以上版本兼容不佳
 
 <!-- ROADMAP -->
 ## 计划
