@@ -1,4 +1,4 @@
-## 由于项目开发者高三开学，项目更新十分缓慢😭 可加QQ群获取项目作者最新消息: 531928387
+## 由于项目开发者初一开学，项目更新十分缓慢😭
 
 <!-- PROJECT LOGO -->
 <br />
@@ -39,7 +39,7 @@
 <!-- ABOUT THE PROJECT -->
 ## 关于本项目
 
-[![Product Name Screen Shot][product-screenshot]](https://space.bilibili.com/1582724340)
+你觉得呢?
 
 
 
@@ -52,7 +52,7 @@
 
 ??
 
-到 [Open issues](https://github.com/XiaoYouChR/Ghost-Downloader-3/issues) 页面查看所有被请求的功能 (以及已知的问题) 。
+到 [Open issues](https://github.com/oneachina/AutoSprint/issues) 页面查看所有被请求的功能 (以及已知的问题) 。
 
 
 
@@ -87,7 +87,7 @@
 <!-- CONTACT -->
 ## 联系
 
-[@晓游ChR](https://space.bilibili.com/437313511) - XiaoYouChR@outlook.com
+[@onea](https://space.bilibili.com/1582724340)
 
 
 
