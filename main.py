@@ -1,9 +1,6 @@
 # coding:utf-8
-
 # create Application
-
 import sys
-
 from PyQt5.QtCore import Qt, QUrl, QSharedMemory
 from PyQt5.QtGui import QIcon, QDesktopServices
 from PyQt5.QtWidgets import QApplication, QFrame, QHBoxLayout, QMessageBox
@@ -11,6 +8,7 @@ from qfluentwidgets import (NavigationItemPosition, MessageBox, setTheme, Theme,
                             NavigationAvatarWidget, qrouter, SubtitleLabel, setFont, InfoBadge,
                             InfoBadgePosition, FluentBackgroundTheme)
 from qfluentwidgets import FluentIcon as FIF
+from apps.view.SettingInterface import SettingInterface  # 引入 SettingInterface
 
 
 class Widget(QFrame):
@@ -33,7 +31,7 @@ class Window(FluentWindow):
 
         # create sub interface
         self.homeInterface = Widget('home Interface', self)
-        self.settingInterface = Widget('Setting Interface', self)
+        self.settingInterface = SettingInterface(self)  # 使用设置界面
 
         self.initNavigation()
         self.initWindow()
@@ -45,30 +43,24 @@ class Window(FluentWindow):
         # add custom widget to bottom
         self.navigationInterface.addWidget(
             routeKey='avatar',
-            widget=NavigationAvatarWidget('zhiyiYo', 'resource/shoko.png'),
+            widget=NavigationAvatarWidget('onea', 'images/icon.png'),
             onClick=self.showMessageBox,
             position=NavigationItemPosition.BOTTOM,
         )
 
         self.addSubInterface(self.settingInterface, FIF.SETTING, 'Settings', NavigationItemPosition.BOTTOM)
 
-        # add badge to navigation item
-
-        # NOTE: enable acrylic effect
-        # self.navigationInterface.setAcrylicEnabled(True)
+        # enable acrylic effect
+        self.navigationInterface.setAcrylicEnabled(True)
 
     def initWindow(self):
         self.resize(900, 700)
         self.setWindowIcon(QIcon(':/qfluentwidgets/images/logo.png'))
-        self.setWindowTitle('PyQt-Fluent-Widgets')
+        self.setWindowTitle('AutoSprint for Minecraft')
 
         desktop = QApplication.desktop().availableGeometry()
         w, h = desktop.width(), desktop.height()
-        self.move(w//2 - self.width()//2, h//2 - self.height()//2)
-
-        # set the minimum window width that allows the navigation panel to be expanded
-        # self.navigationInterface.setMinimumExpandWidth(900)
-        # self.navigationInterface.expand(useAni=False)
+        self.move(w // 2 - self.width() // 2, h // 2 - self.height() // 2)
 
     def showMessageBox(self):
         w = MessageBox(
@@ -88,8 +80,6 @@ if __name__ == '__main__':
     QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
     QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
 
-    # setTheme(Theme.DARK)
-
     app = QApplication(sys.argv)
     w = Window()
     w.show()
@@ -99,8 +89,4 @@ if __name__ == '__main__':
     if share.attach():
         msg_box = QMessageBox()
         msg_box.setWindowTitle("提示")
-        msg_box.setText("软件已在运行!")
-        msg_box.setIcon(QMessageBox.Information)
-        msg_box.addButton("确定", QMessageBox.YesRole)
-        msg_box.exec()
-        sys.exit(-1)
+

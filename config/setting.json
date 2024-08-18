@@ -1,0 +1,14 @@
+{
+    "Material": {
+        "AcrylicBlurRadius": 14
+    },
+    "MainWindow": {
+        "DpiScale": "Auto",
+        "Language": "zh_CN",
+        "MicaEnabled": true
+    },
+    "QFluentWidgets": {
+        "ThemeColor": "#ff009faa",
+        "ThemeMode": "Light"
+    }
+}
