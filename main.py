@@ -1,12 +1,12 @@
 # coding:utf-8
 # create Application
 import sys
-from PyQt5.QtCore import Qt, QUrl, QSharedMemory
+from PyQt5.QtCore import Qt, QUrl, QSharedMemory, QSize, QEventLoop, QTimer
 from PyQt5.QtGui import QIcon, QDesktopServices
 from PyQt5.QtWidgets import QApplication, QFrame, QHBoxLayout, QMessageBox
 from qfluentwidgets import (NavigationItemPosition, MessageBox, setTheme, Theme, FluentWindow,
                             NavigationAvatarWidget, qrouter, SubtitleLabel, setFont, InfoBadge,
-                            InfoBadgePosition, FluentBackgroundTheme)
+                            InfoBadgePosition, FluentBackgroundTheme, SplashScreen)
 from qfluentwidgets import FluentIcon as FIF
 from apps.view.SettingInterface import SettingInterface  # 引入 SettingInterface
 
@@ -28,6 +28,16 @@ class Window(FluentWindow):
 
     def __init__(self):
         super().__init__()
+        self.setWindowIcon(QIcon('./images/logo.png'))
+        self.setWindowTitle('AutoSprint for Minecraft')
+        #开始动画
+        self.splashScreen = SplashScreen(self.windowIcon(), self)
+        self.splashScreen.setIconSize(QSize(102, 102))
+        self.show()
+        self.createSubInterface()
+
+        #隐藏启动页面
+        self.splashScreen.finish()
 
         # create sub interface
         self.homeInterface = Widget('home Interface', self)
@@ -55,9 +65,6 @@ class Window(FluentWindow):
 
     def initWindow(self):
         self.resize(900, 700)
-        self.setWindowIcon(QIcon(':/qfluentwidgets/images/logo.png'))
-        self.setWindowTitle('AutoSprint for Minecraft')
-
         desktop = QApplication.desktop().availableGeometry()
         w, h = desktop.width(), desktop.height()
         self.move(w // 2 - self.width() // 2, h // 2 - self.height() // 2)
@@ -74,6 +81,10 @@ class Window(FluentWindow):
         if w.exec():
             QDesktopServices.openUrl(QUrl("https://space.bilibili.com/1582724340"))
 
+    def createSubInterface(self):
+        loop = QEventLoop(self)
+        QTimer.singleShot(3000, loop.quit)
+        loop.exec()
 
 if __name__ == '__main__':
     QApplication.setHighDpiScaleFactorRoundingPolicy(Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)
