@@ -9,6 +9,7 @@ from qfluentwidgets import (NavigationItemPosition, MessageBox, setTheme, Theme,
                             InfoBadgePosition, FluentBackgroundTheme, SplashScreen)
 from qfluentwidgets import FluentIcon as FIF
 from apps.view.SettingInterface import SettingInterface  # 引入 SettingInterface
+from apps.view.autosprintInterface import autosprintInterface
 
 
 class Widget(QFrame):
@@ -30,19 +31,19 @@ class Window(FluentWindow):
         super().__init__()
         self.setWindowIcon(QIcon('./images/logo.png'))
         self.setWindowTitle('AutoSprint for Minecraft')
-        #开始动画
+        # 开始动画
         self.splashScreen = SplashScreen(self.windowIcon(), self)
         self.splashScreen.setIconSize(QSize(102, 102))
         self.show()
         self.createSubInterface()
 
-        #隐藏启动页面
+        # 隐藏启动页面
         self.splashScreen.finish()
 
         # create sub interface
         self.homeInterface = Widget('home Interface', self)
+        self.autosprintInterface = Widget('xprint Interface', self)
         self.settingInterface = SettingInterface(self)  # 使用设置界面
-
         self.initNavigation()
         self.initWindow()
 
@@ -59,7 +60,7 @@ class Window(FluentWindow):
         )
 
         self.addSubInterface(self.settingInterface, FIF.SETTING, 'Settings', NavigationItemPosition.BOTTOM)
-
+        self.addSubInterface(self.autosprintInterface, FIF.INFO, "AutoSprint")
         # enable acrylic effect
         self.navigationInterface.setAcrylicEnabled(True)
 
@@ -86,6 +87,7 @@ class Window(FluentWindow):
         QTimer.singleShot(3000, loop.quit)
         loop.exec()
 
+
 if __name__ == '__main__':
     QApplication.setHighDpiScaleFactorRoundingPolicy(Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)
     QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
@@ -100,4 +102,3 @@ if __name__ == '__main__':
     if share.attach():
         msg_box = QMessageBox()
         msg_box.setWindowTitle("提示")
-

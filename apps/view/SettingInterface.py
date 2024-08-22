@@ -7,7 +7,7 @@ from qfluentwidgets import InfoBar
 from qfluentwidgets import (SettingCardGroup, SwitchSettingCard, OptionsSettingCard, HyperlinkCard,
                             PrimaryPushSettingCard, ScrollArea,
                             ComboBoxSettingCard, ExpandLayout, CustomColorSettingCard,
-                            setTheme, setThemeColor, RangeSettingCard,Theme)
+                            setTheme, setThemeColor, RangeSettingCard, Theme)
 
 from .config import cfg, HELP_URL, FEEDBACK_URL, AUTHOR, VERSION, YEAR, isWin11
 from .signal_bus import signalBus
@@ -109,6 +109,10 @@ class SettingInterface(ScrollArea):
             self.tr('Version') + " " + VERSION,
             self.aboutGroup
         )
+
+        # Tool
+
+
 
         self.__initWidget()
 
