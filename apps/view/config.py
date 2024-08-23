@@ -44,12 +44,12 @@ class Config(QConfig):
 YEAR = 2024
 AUTHOR = "onea"
 VERSION = "1.0.0"
-HELP_URL = "https://github.com/oneachina/AutoSprint/"
-REPO_URL = "https://github.com/oneachina/AutoSprint/"
-FEEDBACK_URL = "https://github.com/oneachina/AutoSprint/issues"
-RELEASE_URL = "https://github.com/oneachina/AutoSprint/releases"
-ZH_SUPPORT_URL = "https://github.com/oneachina/AutoSprint/"
-EN_SUPPORT_URL = "https://github.com/oneachina/AutoSprint/"
+HELP_URL = "https://github.com/oneachina/PyMinecraftClient/"
+REPO_URL = "https://github.com/oneachina/PyMinecraftClient/"
+FEEDBACK_URL = "https://github.com/oneachina/PyMinecraftClient/"
+RELEASE_URL = "https://github.com/oneachina/PyMinecraftClient/releases"
+ZH_SUPPORT_URL = "https://github.com/oneachina/PyMinecraftClient/"
+EN_SUPPORT_URL = "https://github.com/oneachina/PyMinecraftClient/"
 
 cfg = Config()
 cfg.themeMode.value = Theme.AUTO

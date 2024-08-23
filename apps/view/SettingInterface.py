@@ -23,7 +23,7 @@ class SettingInterface(ScrollArea):
         self.expandLayout = ExpandLayout(self.scrollWidget)
         # setting label
         self.settingLabel = QLabel(self.tr("设置"), self)
-        self.setWindowTitle('AutoSprint for Minecraft - setting')
+        self.setWindowTitle('PyMinecraftClient for Minecraft - setting')
         # personalization
         self.personalGroup = SettingCardGroup(
             self.tr('个性化'), self.scrollWidget)

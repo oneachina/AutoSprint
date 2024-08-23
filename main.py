@@ -30,7 +30,7 @@ class Window(FluentWindow):
     def __init__(self):
         super().__init__()
         self.setWindowIcon(QIcon('./images/logo.png'))
-        self.setWindowTitle('AutoSprint for Minecraft')
+        self.setWindowTitle('PyMinecraftClient for Minecraft')
         # 开始动画
         self.splashScreen = SplashScreen(self.windowIcon(), self)
         self.splashScreen.setIconSize(QSize(102, 102))
@@ -60,7 +60,7 @@ class Window(FluentWindow):
         )
 
         self.addSubInterface(self.settingInterface, FIF.SETTING, 'Settings', NavigationItemPosition.BOTTOM)
-        self.addSubInterface(self.autosprintInterface, FIF.INFO, "AutoSprint")
+        self.addSubInterface(self.autosprintInterface, FIF.INFO, "PyMinecraftClient")
         # enable acrylic effect
         self.navigationInterface.setAcrylicEnabled(True)
 
@@ -98,7 +98,7 @@ if __name__ == '__main__':
     w.show()
     app.exec_()
     share = QSharedMemory()
-    share.setKey("AutoSprint for Minecraft")
+    share.setKey("PyMinecraftClient for Minecraft")
     if share.attach():
         msg_box = QMessageBox()
         msg_box.setWindowTitle("提示")
