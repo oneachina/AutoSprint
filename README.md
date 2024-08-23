@@ -1,20 +1,18 @@
-## 由于项目开发者初一开学，项目更新十分缓慢😭
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/oneachina/AutoSprint">
+  <a href="https://github.com/oneachina/PyMinecraftClient">
     <img src="images/logo.png" alt="Logo" width="100" height="100">
   </a>
 
-<h3 align="center">AutoSprint</h3>
+<h3 align="center">LIMA Client for Python</h3>
 
   <p align="center">
-    AutoSprint for Minecraft Java/BE
+    Python Client for Minecraft Java/BE 
     <br />
-    <a href="https://github.com/oneachina/AutoSprint/issues">Report Bug</a>
+    <a href="https://github.com/oneachina/PyMinecraftClient/issues">Report Bug</a>
     ·
-    <a href="https://github.com/oneachina/AutoSprint/issues">Request Feature</a>
+    <a href="https://github.com/oneachina/PyMinecraftClient/issues">Request Feature</a>
   </p>
 </div>
 
@@ -38,9 +36,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## 关于本项目
-
-你觉得呢?
-
+是一个使用python来进行外部显示，如 cps显示，按键显示等等
+可以确保不会阻挡其他外挂（fdp, rh等) 的clickgui，进行显示其他，但大多数功能（动态模糊等）都或许不太可能实现，等以后看看把
 
 
 ## 须知
@@ -52,7 +49,7 @@
 
 ??
 
-到 [Open issues](https://github.com/oneachina/AutoSprint/issues) 页面查看所有被请求的功能 (以及已知的问题) 。
+到 [Open issues](https://github.com/oneachina/PyMinecraftClient/issues) 页面查看所有被请求的功能 (以及已知的问题) 。
 
 
 
